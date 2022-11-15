@@ -12,3 +12,4 @@ Feature: As an authenticated user, I should be able to login to the application
     When I click the "Log In" button
     Then I should see the dashboard
     When I click the " New " button
+  
