@@ -38,4 +38,30 @@ public class Login extends BaseClass {
 	public void i_should_see_the_dashboard() {
 		Assert.assertTrue(driver.findElement(By.id("phHeaderLogoImage")).isDisplayed());
 	}
+	@Then("I click the account tab")
+	public void i_click_the_account_tab() {
+	   driver.findElement(By.xpath("//a[@title='Accounts Tab']")).click();
+	}
+	@Given("I click the new button")
+	public void i_click_the_new_button() {
+	    driver.findElement(By.className("new")).click();
+	}
+	@Given("I enter account name")
+	public void i_enter_account_name() {
+		 driver.findElement(By.id("acc2")).sendKeys("Aimal Faiq");
+	}
+	@Given("I enter account number")
+	public void i_enter_account_number() {
+	  driver.findElement(By.id("acc5")).sendKeys("333333");
+	}
+	@When("I enter phone number")
+	public void i_enter_phone_number() {
+		  driver.findElement(By.id("acc10")).sendKeys("123456");
+	}
+	@When("I click the save button")
+	public void i_click_the_save_button() {
+		  driver.findElement(By.xpath("//input[@title='Save']")).click();
+	}
+	
+
 }

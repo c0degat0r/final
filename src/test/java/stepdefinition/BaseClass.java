@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 public class BaseClass {
 	public static WebDriver driver;
@@ -15,7 +16,11 @@ public class BaseClass {
 			 driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			 driver = new FirefoxDriver();
-		} else {
+		} else if (browser.equalsIgnoreCase("chrome2")) {
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "/src/test/resources/drivers/mac/chromedriver");
+			 driver = new ChromeDriver();
+		}
+		else {
 			System.out.println("Invalid browser");
 		}
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
