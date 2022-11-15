@@ -11,6 +11,7 @@ Feature: As an authenticated user, I should be able to login to the application
     And I enter "Welcome1" password
     When I click the "Log In" button
     Then I should see the dashboard
+    Then I click the "Accounts" tab
     When I click the " New " button
     Then I should see the account number field
     And I enter "EdwardGuti" in the account name field
