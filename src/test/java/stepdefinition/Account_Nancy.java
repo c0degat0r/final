@@ -83,11 +83,7 @@ public class Account_Nancy extends BaseClass{
 		driver.findElement(By.xpath("//input[@value=' Save ']")).click();
 	}
 	
-	@When("I click the {string} tab")
-	public void i_click_the_tab(String tab) {
-		//System.out.println("inside the method");just for me
-	    driver.findElement(By.xpath("//a[@title='"+tab+" Tab']")).click();
-	}
+	
 	//this whole method is for verification of values only 
 	@Then("I should see the below drop down values for {string} field")
 	public void i_should_see_the_below_drop_down_values_for_field(String sla, io.cucumber.datatable.DataTable dataTable) {
