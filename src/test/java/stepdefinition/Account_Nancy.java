@@ -29,7 +29,7 @@ public class Account_Nancy extends BaseClass{
 
 	@When("I click the New button")
 	public void i_click_the_new_button() {
-		driver.findElement(By.xpath("//input[@value=' New ']")).click();
+		driver.findElement(By.xpath("//input[@title='New']")).click();
 	}
 
 	@Then("I see New Account page title")
@@ -85,20 +85,38 @@ public class Account_Nancy extends BaseClass{
 	
 	@When("I click the {string} tab")
 	public void i_click_the_tab(String tab) {
-	    driver.findElement(By.xpath("//a[@title='"+tab+"Tab']"));
+		//System.out.println("inside the method");just for me
+	    driver.findElement(By.xpath("//a[@title='"+tab+" Tab']")).click();
 	}
+	//this whole method is for verification of values only 
 	@Then("I should see the below drop down values for {string} field")
 	public void i_should_see_the_below_drop_down_values_for_field(String sla, io.cucumber.datatable.DataTable dataTable) {
 	    List<String> slaData = dataTable.asList();
+	   // System.out.println(slaData);just for me to see
 	    WebElement slaDropDown = driver.findElement(By.id(sla));
 	    Select sel = new Select(slaDropDown);
 	    List<WebElement> options = sel.getOptions();
 	    for (int i=0; i<options.size(); i++) {
 	    	Assert.assertEquals(options.get(i).getText(), slaData.get(i));
-	    }
-	    
-	    
+	    }   
+	} 
+
+	@Then("I should be able to select {string} from a {string} field")
+	public void i_should_be_able_to_select_from_a_field(String option, String field) {
+		WebElement Options = driver.findElement(By.id(field));
+		Select select = new Select (Options);
+		List <WebElement> alloptions = select.getOptions();
+		for (int i = 0; i < alloptions.size(); i++) {
+			for (WebElement values : alloptions) {
+				if (values.getText().equalsIgnoreCase(option)) {
+				values.click();
+					break;
+				}
+			}
+		}
 	} 
 	
+
+
 
 }

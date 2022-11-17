@@ -1,5 +1,4 @@
 #Author: your.email@your.domain.com
-
 @tag
 Feature: As an authenticated user, I should be able to login to the application
 
@@ -11,5 +10,3 @@ Feature: As an authenticated user, I should be able to login to the application
     And I enter "Welcome1" password
     When I click the "Log In" button
     Then I should see the dashboard
-    When I click the " New " button
-  
