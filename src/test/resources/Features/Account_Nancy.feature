@@ -44,7 +44,7 @@ Feature: Verify that Account Number input field is present
     When I click the "Accounts" tab
     And I click the New button
     Then I see New Account page title
-    Then I should see the below drop down values for "00N3t00000LA9IN" field
+    Then I should see the below drop down values for "00N3t00000LA9IN" field nancy
       | --None-- |
       | Gold     |
       | Silver   |
