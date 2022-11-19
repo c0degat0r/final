@@ -21,5 +21,19 @@ Feature: Title of your feature
       | --None-- |
       | No       |
       | Yes      |
-      
-     
+
+	@Rating
+  Scenario: As an authenticated user, verify rating dropdown is present
+    Given I open "chrome" browser
+    And I visit "qa" environment
+    When I enter "batch07@codegator.com.qa" username
+    And I enter "Welcome1" password
+    When I click the "Log In" button
+    Then I should see the dashboard
+    When I click the "Accounts" tab
+    And I click the " New " button
+    Then I should see the below drop down values for "acc9" field
+      | --None-- |
+      | Hot      |
+      | Warm     |
+      | Cold     |
