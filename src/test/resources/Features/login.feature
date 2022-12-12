@@ -2,7 +2,7 @@
 @tag
 Feature: As an authenticated user, I should be able to login to the application
 
-  @tag1
+  #@tag1
   Scenario: As an authenticated user, I should be able to login
     Given I open "chrome" browser
     And I visit "qa" environment
