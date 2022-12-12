@@ -50,7 +50,7 @@ Feature: Verify that Account Number input field is present
       | Silver   |
       | Platinum |
       | Bronze   |
-    And I should be able to select "Gold" from a "00N3t00000LA9IN" field
+    And I should be able to select "Gold" from a "00N3t00000LA9IN" field 
 
   Scenario: verify Active drop down values
     Given I open "chrome" browser
@@ -62,7 +62,7 @@ Feature: Verify that Account Number input field is present
     When I click the "Accounts" tab
     And I click the New button
     Then I see New Account page title
-    Then I should see the below drop down values for "00N3t00000LA9IK" field
+    Then I should see the below drop down values for "00N3t00000LA9IK" field nancy
       | --None-- |
       | No       |
       | Yes      |
@@ -79,7 +79,7 @@ Feature: Verify that Account Number input field is present
     When I click the "Accounts" tab
     And I click the New button
     Then I see New Account page title
-    Then I should see the below drop down values for "acc9" field
+    Then I should see the below drop down values for "acc9" field nancy
       | --None-- |
       | Hot      |
       | Warm     |
@@ -97,7 +97,7 @@ Feature: Verify that Account Number input field is present
     When I click the "Accounts" tab
     And I click the New button
     Then I see New Account page title
-    Then I should see the below drop down values for "acc7" field
+    Then I should see the below drop down values for "acc7" field nancy
       | --None--           |
       | Agriculture        |
       | Apparel            |
@@ -133,7 +133,7 @@ Feature: Verify that Account Number input field is present
       | Other              |
     And I should be able to select "Food & Beverage" from a "acc7" field
 
-  @
+  
   Scenario: verify Type drop down values
     Given I open "chrome" browser
     And I visit "qa" environment
@@ -144,7 +144,7 @@ Feature: Verify that Account Number input field is present
     When I click the "Accounts" tab
     And I click the New button
     Then I see New Account page title
-    Then I should see the below drop down values for "acc6" field
+    Then I should see the below drop down values for "acc6" field nancy
       | --None--                   |
       | Prospect                   |
       | Customer - Direct          |
